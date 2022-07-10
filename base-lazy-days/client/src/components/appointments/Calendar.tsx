@@ -18,6 +18,7 @@ import { useAppointments } from './hooks/useAppointments';
 export function Calendar(): ReactElement {
   const currentDate = dayjs();
 
+  // prettier-ignore
   const {
     appointments,
     monthYear,

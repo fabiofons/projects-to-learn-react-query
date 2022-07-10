@@ -26,6 +26,7 @@ export function useAuth(): UseAuth {
     password: string,
   ): Promise<void> {
     try {
+      // prettier-ignore
       const {
         data,
         status,

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 import { render, RenderResult } from '@testing-library/react';
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import { QueryClient, QueryClientProvider, setLogger } from 'react-query';
 
 import { generateQueryClient } from '../react-query/queryClient';
@@ -34,7 +34,7 @@ export function renderWithQueryClient(
 }
 
 // from https://tkdodo.eu/blog/testing-react-query#for-custom-hooks
-export const createQueryClientWrapper = (): React.FC => {
+export const createQueryClientWrapper = (children: ReactNode): React.FC => {
   const queryClient = generateTestQueryClient();
   return ({ children }) => (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>

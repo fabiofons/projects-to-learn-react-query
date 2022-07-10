@@ -18,6 +18,6 @@ export function useCustomToast(): UseCustomToast {
   return useToast({
     isClosable: true,
     variant: 'subtle',
-    position: 'bottom',
+    position: 'top',
   });
 }
